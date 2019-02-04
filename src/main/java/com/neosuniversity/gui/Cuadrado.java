@@ -3,6 +3,9 @@ package com.neosuniversity.gui;
 import java.awt.Color;
 import java.awt.Graphics;
 
+/**
+ * The type Cuadrado.
+ */
 public class Cuadrado implements  Figura{
 
     private int x;
@@ -11,6 +14,9 @@ public class Cuadrado implements  Figura{
     private int size;
     private boolean isFilled;
 
+    /**
+     * Instantiates a new Cuadrado.
+     */
     public Cuadrado() {
 
         this.x = 0;
@@ -20,6 +26,14 @@ public class Cuadrado implements  Figura{
 
     }
 
+    /**
+     * Instantiates a new Cuadrado.
+     *
+     * @param size  the size
+     * @param color the color
+     * @param x     the x
+     * @param y     the y
+     */
     public Cuadrado (int size, Color color, int x, int y) {
         this.size = size;
         this.color = color;
@@ -28,6 +42,15 @@ public class Cuadrado implements  Figura{
 
     }
 
+    /**
+     * Instantiates a new Cuadrado.
+     *
+     * @param size     the size
+     * @param color    the color
+     * @param x        the x
+     * @param y        the y
+     * @param isFilled the is filled
+     */
     public Cuadrado (int size, Color color, int x, int y, boolean isFilled) {
         this.size = size;
         this.color = color;

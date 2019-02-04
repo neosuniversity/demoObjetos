@@ -6,8 +6,16 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type App figuras.
+ */
 public class AppFiguras {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(() -> {
@@ -42,6 +50,12 @@ public class AppFiguras {
 
     }
 
+    /**
+     * Get ventana j frame.
+     *
+     * @param title the title
+     * @return the j frame
+     */
     public static JFrame getVentana (String title){
 
         JFrame ventana = new JFrame();

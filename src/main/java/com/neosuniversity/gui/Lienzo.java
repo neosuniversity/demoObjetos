@@ -3,6 +3,7 @@ package com.neosuniversity.gui;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import java.awt.Color;
@@ -11,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * The type Lienzo.
+ */
 public class Lienzo extends JPanel {
 
     private List<Figura> figuras = new ArrayList<>();
@@ -18,11 +22,20 @@ public class Lienzo extends JPanel {
     private Lienzo lienzo2;
 
 
-
+    /**
+     * Add lienzo 2.
+     *
+     * @param lienzo2 the lienzo 2
+     */
     public void addLienzo2(Lienzo lienzo2) {
         this.lienzo2 = lienzo2;
     }
 
+    /**
+     * Instantiates a new Lienzo.
+     *
+     * @param figuras the figuras
+     */
     public Lienzo(List<Figura> figuras) {
 
         this.figuras = figuras;
@@ -30,16 +43,23 @@ public class Lienzo extends JPanel {
         JButton boton = new JButton("Mover Figuras");
         this.add(boton);
         boton.addActionListener((e)-> {
-            if (this.figuras.size()>=0) {
+            if (this.figuras.size()>=1) {
                 Figura f = this.figuras.remove(this.figuras.size()-1);
                 this.lienzo2.addFigura(f);
 
                 repaint();
+            } else {
+                JOptionPane.showMessageDialog(this, "NO hay objetos para mover");
             }
 
         });
     }
 
+    /**
+     * Add figura.
+     *
+     * @param figura the figura
+     */
     public void addFigura(Figura figura){
         this.figuras.add(figura);
         repaint();

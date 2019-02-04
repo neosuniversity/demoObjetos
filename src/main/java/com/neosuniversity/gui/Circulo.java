@@ -3,6 +3,9 @@ package com.neosuniversity.gui;
 import java.awt.Color;
 import java.awt.Graphics;
 
+/**
+ * The type Circulo.
+ */
 public class Circulo implements Figura {
 
     private double radio;
@@ -12,6 +15,9 @@ public class Circulo implements Figura {
     private boolean isFilled;
 
 
+    /**
+     * Instantiates a new Circulo.
+     */
     public Circulo() {
         this.radio = 50;
         this.color = Color.BLACK;
@@ -19,6 +25,14 @@ public class Circulo implements Figura {
         this.y = 0;
     }
 
+    /**
+     * Instantiates a new Circulo.
+     *
+     * @param radio the radio
+     * @param color the color
+     * @param x     the x
+     * @param y     the y
+     */
     public Circulo (double radio, Color color, int x, int y) {
         this.radio = radio;
         this.color = color;
@@ -26,6 +40,15 @@ public class Circulo implements Figura {
         this.y = y;
     }
 
+    /**
+     * Instantiates a new Circulo.
+     *
+     * @param radio    the radio
+     * @param color    the color
+     * @param x        the x
+     * @param y        the y
+     * @param isFilled the is filled
+     */
     public Circulo(double radio, Color color, int x, int y, boolean isFilled) {
         this(radio,color,x,y);
         this.isFilled = isFilled;
