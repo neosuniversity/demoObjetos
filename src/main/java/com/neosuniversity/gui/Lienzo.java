@@ -1,6 +1,7 @@
 package com.neosuniversity.gui;
 
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -8,6 +9,11 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -73,6 +79,13 @@ public class Lienzo extends JPanel {
             f.draw(g);
             System.out.println("Area: " + f.getClass().getName() + ":"+  f.area());
         });
+
+        try {
+            BufferedImage image = ImageIO.read(new File("/Users/neossoftware/Downloads/duke.jpg"));
+            g.drawImage(image, 200, 200, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
